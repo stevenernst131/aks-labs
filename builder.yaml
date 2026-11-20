@@ -2,6 +2,6 @@ components:
   - name: site
     role: static
     platform: nodejs
-    build: AKS_LABS_BASE_URL=/ npm run build && mkdir -p "$DESTINATION_DIR/build" && cp -R build/. "$DESTINATION_DIR/build/"
+    build: npm ci && AKS_LABS_BASE_URL=/ npm run build && mkdir -p "$DESTINATION_DIR/build" && cp -R build/. "$DESTINATION_DIR/build/"
     output: build
     path: /
